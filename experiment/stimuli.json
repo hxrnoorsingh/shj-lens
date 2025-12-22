@@ -1,0 +1,82 @@
+[
+  {
+    "id": 0,
+    "shape": 0,
+    "color": 0,
+    "size": 0,
+    "shape_name": "circle",
+    "color_name": "red",
+    "size_name": "small",
+    "label": "Small Red Circle"
+  },
+  {
+    "id": 1,
+    "shape": 0,
+    "color": 0,
+    "size": 1,
+    "shape_name": "circle",
+    "color_name": "red",
+    "size_name": "large",
+    "label": "Large Red Circle"
+  },
+  {
+    "id": 2,
+    "shape": 0,
+    "color": 1,
+    "size": 0,
+    "shape_name": "circle",
+    "color_name": "blue",
+    "size_name": "small",
+    "label": "Small Blue Circle"
+  },
+  {
+    "id": 3,
+    "shape": 0,
+    "color": 1,
+    "size": 1,
+    "shape_name": "circle",
+    "color_name": "blue",
+    "size_name": "large",
+    "label": "Large Blue Circle"
+  },
+  {
+    "id": 4,
+    "shape": 1,
+    "color": 0,
+    "size": 0,
+    "shape_name": "triangle",
+    "color_name": "red",
+    "size_name": "small",
+    "label": "Small Red Triangle"
+  },
+  {
+    "id": 5,
+    "shape": 1,
+    "color": 0,
+    "size": 1,
+    "shape_name": "triangle",
+    "color_name": "red",
+    "size_name": "large",
+    "label": "Large Red Triangle"
+  },
+  {
+    "id": 6,
+    "shape": 1,
+    "color": 1,
+    "size": 0,
+    "shape_name": "triangle",
+    "color_name": "blue",
+    "size_name": "small",
+    "label": "Small Blue Triangle"
+  },
+  {
+    "id": 7,
+    "shape": 1,
+    "color": 1,
+    "size": 1,
+    "shape_name": "triangle",
+    "color_name": "blue",
+    "size_name": "large",
+    "label": "Large Blue Triangle"
+  }
+]

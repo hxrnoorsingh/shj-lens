@@ -1,0 +1,47 @@
+{
+    "type_1": {
+        "name": "Type I - Single Feature Rule",
+        "description": "Category A: All circles, Category B: All triangles",
+        "categories": {
+            "0": "A",
+            "1": "A",
+            "2": "A",
+            "3": "A",
+            "4": "B",
+            "5": "B",
+            "6": "B",
+            "7": "B"
+        },
+        "rule": "shape == 0 → A, shape == 1 → B"
+    },
+    "type_2": {
+        "name": "Type II - XOR Rule",
+        "description": "Category A: (Small circles OR Large triangles), Category B: (Large circles OR Small triangles)",
+        "categories": {
+            "0": "A",
+            "1": "B",
+            "2": "A",
+            "3": "B",
+            "4": "B",
+            "5": "A",
+            "6": "B",
+            "7": "A"
+        },
+        "rule": "(shape == 0 AND size == 0) OR (shape == 1 AND size == 1) → A"
+    },
+    "type_6": {
+        "name": "Type VI - Family Resemblance",
+        "description": "No simple rule - category determined by overall similarity",
+        "categories": {
+            "0": "A",
+            "1": "B",
+            "2": "B",
+            "3": "A",
+            "4": "B",
+            "5": "A",
+            "6": "A",
+            "7": "B"
+        },
+        "rule": "No explicit rule - family resemblance structure"
+    }
+}

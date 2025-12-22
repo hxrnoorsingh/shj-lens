@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHJ Category Learning Experiment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Instructions Screen -->
+        <div id="instructions-screen" class="screen active">
+            <h1>Category Learning Experiment</h1>
+            <div class="instructions-content">
+                <p>Welcome! In this experiment, you will learn to categorize simple shapes into two categories: <strong>Category A</strong> and <strong>Category B</strong>.</p>
+                
+                <h3>How it works:</h3>
+                <ul>
+                    <li>You'll see shapes that vary in <strong>shape</strong> (circle or triangle), <strong>color</strong> (red or blue), and <strong>size</strong> (small or large)</li>
+                    <li>Your job is to learn which category each shape belongs to</li>
+                    <li>After each guess, you'll receive immediate feedback</li>
+                    <li>There is a pattern to learn, but it may take some time to figure out</li>
+                </ul>
+
+                <h3>Practice Round:</h3>
+                <p>We'll start with 8 practice trials to get familiar with the task.</p>
+
+                <div class="participant-info">
+                    <label for="participant-id">Enter your ID (name or initials):</label>
+                    <input type="text" id="participant-id" placeholder="e.g., JD or john_doe" required>
+                </div>
+
+                <button id="start-button" class="btn btn-primary">Start Experiment</button>
+            </div>
+        </div>
+
+        <!-- Practice Screen -->
+        <div id="practice-screen" class="screen">
+            <h2>Practice Round</h2>
+            <p class="practice-info">This is practice. Learn the pattern!</p>
+            
+            <div id="practice-stimulus-container" class="stimulus-container">
+                <svg id="practice-stimulus" width="300" height="300"></svg>
+            </div>
+
+            <div class="response-buttons">
+                <button class="btn btn-category btn-a" data-category="A">Category A</button>
+                <button class="btn btn-category btn-b" data-category="B">Category B</button>
+            </div>
+
+            <div id="practice-feedback" class="feedback"></div>
+            <div class="progress-info">
+                <span id="practice-trial-count">Trial 1 of 8</span>
+            </div>
+        </div>
+
+        <!-- Main Task Screen -->
+        <div id="task-screen" class="screen">
+            <div class="header">
+                <h2 id="task-title">Learning Block 1</h2>
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+            </div>
+
+            <div id="stimulus-container" class="stimulus-container">
+                <svg id="stimulus" width="300" height="300"></svg>
+            </div>
+
+            <div class="response-buttons">
+                <button class="btn btn-category btn-a" data-category="A">Category A</button>
+                <button class="btn btn-category btn-b" data-category="B">Category B</button>
+            </div>
+
+            <div id="feedback" class="feedback"></div>
+            
+            <div class="progress-info">
+                <span id="trial-count">Trial 1</span>
+                <span id="accuracy-display">Accuracy: --</span>
+            </div>
+        </div>
+
+        <!-- Completion Screen -->
+        <div id="completion-screen" class="screen">
+            <h1>🎉 Experiment Complete!</h1>
+            <div class="completion-content">
+                <p>Thank you for participating!</p>
+                <p id="summary-stats"></p>
+                
+                <div class="download-section">
+                    <h3>Download Your Data</h3>
+                    <p>Please click the button below to download your data file and send it back.</p>
+                    <button id="download-button" class="btn btn-primary">Download Data (JSON)</button>
+                </div>
+
+                <div class="next-section" id="next-section" style="display: none;">
+                    <h3>Continue to Next Block?</h3>
+                    <p id="next-block-info"></p>
+                    <button id="next-block-button" class="btn btn-secondary">Start Next Block</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="task.js"></script>
+</body>
+</html>

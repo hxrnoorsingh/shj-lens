@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2d3748;
+    line-height: 1.6;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    width: 90%;
+    min-height: 600px;
+    padding: 40px;
+    position: relative;
+}
+
+/* Screen Management */
+.screen {
+    display: none;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.screen.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Typography */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #4a5568;
+    margin: 1.5rem 0 0.75rem 0;
+}
+
+/* Instructions */
+.instructions-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.instructions-content p {
+    margin-bottom: 1rem;
+    color: #4a5568;
+    font-size: 1.05rem;
+}
+
+.instructions-content ul {
+    margin: 1rem 0 1.5rem 2rem;
+    color: #4a5568;
+}
+
+.instructions-content li {
+    margin-bottom: 0.5rem;
+}
+
+.participant-info {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #f7fafc;
+    border-radius: 12px;
+    border: 2px solid #e2e8f0;
+}
+
+.participant-info label {
+    display: block;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+}
+
+.participant-info input {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 2px solid #cbd5e0;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+    font-family: 'Inter', sans-serif;
+}
+
+.participant-info input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* Stimulus Container */
+.stimulus-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 320px;
+    margin: 2rem 0;
+    background: #f7fafc;
+    border-radius: 16px;
+    padding: 20px;
+}
+
+#stimulus, #practice-stimulus {
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+/* Buttons */
+.btn {
+    padding: 0.875rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    display: block;
+    margin: 2rem auto;
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    display: block;
+    margin: 1rem auto;
+}
+
+.response-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.btn-category {
+    flex: 1;
+    max-width: 200px;
+    padding: 1.25rem 1.5rem;
+    font-size: 1.2rem;
+}
+
+.btn-a {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-b {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+/* Feedback */
+.feedback {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    min-height: 50px;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.feedback.correct {
+    color: #38a169;
+    background: #f0fff4;
+    border: 2px solid #9ae6b4;
+}
+
+.feedback.incorrect {
+    color: #e53e3e;
+    background: #fff5f5;
+    border: 2px solid #fc8181;
+}
+
+/* Progress */
+.header {
+    margin-bottom: 1.5rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 0.5rem;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    transition: width 0.4s ease;
+    width: 0%;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: #718096;
+    font-weight: 500;
+}
+
+.practice-info {
+    text-align: center;
+    color: #d69e2e;
+    font-weight: 600;
+    background: #fefcbf;
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Completion */
+.completion-content {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.completion-content p {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin: 1rem 0;
+}
+
+#summary-stats {
+    background: #f7fafc;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.download-section, .next-section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #f7fafc;
+    border-radius: 12px;
+}
+
+.download-section h3, .next-section h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+#next-block-info {
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+/* Animations */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.btn-category:hover {
+    animation: pulse 1s infinite;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .response-buttons {
+        flex-direction: column;
+    }
+
+    .btn-category {
+        max-width: 100%;
+    }
+}

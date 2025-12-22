@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+.venv
+pip-log.txt
+pip-delete-this-directory.txt
+.ipynb_checkpoints
+*.ipynb_checkpoints
+
+# Project specific
+conda_env/
+experiment/data/*
+!experiment/data/.gitkeep
+results/model_results.json
+
+# IDE
+.vscode/
+.idea/
