@@ -1,4 +1,4 @@
-# Human vs Neural Learning Dynamics on SHJ Category Structures
+# Human and Machine Learning Dynamics in Category Formation: Evidence from SHJ Tasks
 
 ## Introduction
 
